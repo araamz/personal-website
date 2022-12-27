@@ -1,0 +1,30 @@
+@import url('https://fonts.googleapis.com/css2?family=Martian+Mono:wght@300;400;600&display=swap');
+
+:root {
+  font-family: 'Martian Mono', monospace;
+}
+body {
+  margin: 0;
+  padding: 0;
+}
+p {
+  margin: 0;
+  padding: 0;
+}
+
+
+@media only screen and (min-width: 300px) {
+  button {
+    background: none;
+    border-radius: 3px;
+    border: 2px solid lightgray;
+    font-size: 0.7rem;
+    font-family: 'Martian Mono', monospace;
+    color: #a4a4a4;
+
+    padding: 4px 8px;
+  }
+}
+@media only screen and (min-width: 600px) {
+  
+}
