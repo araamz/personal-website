@@ -7,7 +7,9 @@
             {
                 "university": "University of Nevada, Reno",
                 "degree": "B.S. in Computer Science and Engineering",
-                "gpa": 3.594
+                "gpa": 3.594,
+                "start_year": 2018,
+                "end_year": 2023
             }
         ],
         "experience": [
