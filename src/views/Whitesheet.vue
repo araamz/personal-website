@@ -3,15 +3,21 @@
 </script>
 
 <template>
-    <p>
-        Whitesheet
-    </p>
+    <div>
+        <p>
+            Whitesheet
+        </p>
+    </div>
 </template>
 
 <style scoped>
 
 @media only screen and (min-width: 300px) {
-
+    div {
+    }
+    p {
+        height: 1000px;
+    }
     
 }
 

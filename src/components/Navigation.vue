@@ -66,9 +66,15 @@
         color: white;
     }
 
+    .navigation-container > a:hover {
+        background: lightgray;
+        transition: ease-in 0.1s background;
+    }
+
 }
 
 @media only screen and (min-width: 600px) {
+
 
 }
 </style>
