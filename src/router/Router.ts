@@ -1,11 +1,24 @@
 import { createRouter, createWebHistory } from 'vue-router';
-import Home from '../views/Home.vue'
+
+import Whitesheet from '../views/Whitesheet.vue'
+import Projects from '../views/Projects.vue'
+import Contact from '../views/Contact.vue'
 
 const app_routes = [
     {
         path: '/',
-        name: 'Home',
-        component: Home
+        name: 'Whitesheet',
+        component: Whitesheet
+    },
+    {
+        path: '/projects',
+        name: 'Projects',
+        component: Projects
+    },
+    {
+        path: '/contact',
+        name: 'Contact',
+        component: Contact
     }
 ]
 
