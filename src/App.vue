@@ -57,7 +57,7 @@
   .app {
     height: 100vh;
     display: grid;
-    grid-template-columns: 200px max-content;
+    grid-template-columns: 200px 1fr;
     grid-template-rows: min-content 1fr;
     box-sizing: border-box;
   }
