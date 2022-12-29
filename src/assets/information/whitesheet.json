@@ -42,117 +42,121 @@
                 ]
             }
         ],
-        "skills": {
-            "Programming Languages": [
-                {
-                    "technology": "C/C++",
-                    "level": 0,
-                    "description": "test",
-                    "takeaways": [
-                        "Hooks",
-                        "Router",
-                        "Fetching"
-                    ]
-                },
-                {
-                    "technology": "TypeScript",
-                    "level": 0,
-                    "description": "test",
-                    "takeaways": [
-                        "Hooks",
-                        "Router",
-                        "Fetching"
-                    ]
-                },                   
-                {
-                    "technology": "Python",
-                    "level": 0,
-                    "description": "test",
-                    "takeaways": [
-                        "Hooks",
-                        "Router",
-                        "Fetching"
-                    ]
-                },
-                {
-                    "technology": "Java",
-                    "level": 0,
-                    "description": "test",
-                    "takeaways": [
-                        "Hooks",
-                        "Router",
-                        "Fetching"
-                    ]
-                }
-            ],
-            "Frontend Development": [
-                {
-                    "technology": "React JavaScript Library",
-                    "level": 0,
-                    "description": "test",
-                    "takeaways": [
-                        "Hooks",
-                        "Router",
-                        "Fetching"
-                    ]
-                },
-                {
-                    "technology": "Vue.js",
-                    "level": 0,
-                    "description": "test",
-                    "takeaways": [
-                        "Options API",
-                        "Router",
-                        "Fetching"
-                    ]
-                }   
-            ],
-            "Backend Development": [
-                {
-                    "technology": "Flask",
-                    "level": 0,
-                    "description": "test",
-                    "takeaways": [
-                        "Routing"
-                    ]
-                }
-            ],
-            "Embedded Development": [
-                {
-                    "technology": "Arduino UNO",
-                    "level": 0,
-                    "description": "test",
-                    "takeaways": [
-                        "UART Communication"
-                    ]
-                },
-                {
-                    "technology": "ESP32-C3",
-                    "level": 0,
-                    "description": "test",
-                    "takeaways": [
-                        "TCP Communication"
-                    ]
-                }        
-            ],
-            "Networking": [
-                {
-                    "technology": "gRPC",
-                    "level": 0,
-                    "description": "test",
-                    "takeaways": [
-                        "UART Communication"
-                    ]
-                },
-                {
-                    "technology": "MQTT",
-                    "level": 0,
-                    "description": "test",
-                    "takeaways": [
-                        "UART Communication"
-                    ]
-                }
-            ]
-        }
+        "skills": [
+            {
+                "label": "Programming Languages",
+                "technolgoies": [
+                    {
+                        "technology": "C/C++",
+                        "level": 0,
+                        "takeaways": [
+                            "Hooks",
+                            "Router",
+                            "Fetching"
+                        ]
+                    },
+                    {
+                        "technology": "TypeScript",
+                        "level": 0,
+                        "takeaways": [
+                            "Hooks",
+                            "Router",
+                            "Fetching"
+                        ]
+                    },
+                    {
+                        "technology": "Python",
+                        "level": 0,
+                        "takeaways": [
+                            "Hooks",
+                            "Router",
+                            "Fetching"
+                        ]
+                    },
+                    {
+                        "technology": "Java",
+                        "level": 0,
+                        "takeaways": [
+                            "Hooks",
+                            "Router",
+                            "Fetching"
+                        ]
+                    }
+                ]
+            },
+            {
+                "label": "Frontend Development",
+                "technolgoies": [
+                    {
+                        "technology": "React JavaScript Library",
+                        "level": 0,
+                        "takeaways": [
+                            "Hooks",
+                            "Router",
+                            "Fetching"
+                        ]
+                    },
+                    {
+                        "technology": "Vue.js",
+                        "level": 0,
+                        "takeaways": [
+                            "Options API",
+                            "Router",
+                            "Fetching"
+                        ]
+                    }
+                ]
+            },
+            {
+                "label": "Backend Development",
+                "technolgoies": [
+                    {
+                        "technology": "Flask",
+                        "level": 0,
+                        "takeaways": [
+                            "Routing"
+                        ]
+                    }
+                ]
+            },
+            {
+                "label": "Embedded Development",
+                "technolgoies": [
+                    {
+                        "technology": "Arduino UNO",
+                        "level": 0,
+                        "takeaways": [
+                            "UART Communication"
+                        ]
+                    },
+                    {
+                        "technology": "ESP32-C3",
+                        "level": 0,
+                        "takeaways": [
+                            "TCP Communication"
+                        ]
+                    }
+                ]
+            },
+            {
+                "label": "Networking",
+                "technolgoies": [
+                    {
+                        "technology": "gRPC",
+                        "level": 0,
+                        "takeaways": [
+                            "UART Communication"
+                        ]
+                    },
+                    {
+                        "technology": "MQTT",
+                        "level": 0,
+                        "takeaways": [
+                            "UART Communication"
+                        ]
+                    }
+                ]
+            }
+        ]
     }
 }

@@ -56,7 +56,7 @@
 @media only screen and (min-width: 600px) {
 
   .app {
-    height: 100vh;
+    height: 90vh;
     display: grid;
     grid-template-columns: 200px 1fr;
     grid-template-rows: min-content 1fr;
