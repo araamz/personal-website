@@ -11,6 +11,9 @@ body {
 p {
   margin: 0;
   padding: 0;
+  font-size: 0.7rem;
+  line-height: 1rem;
+  text-align: justify;
 }
 h1,
 h2,
@@ -21,20 +24,29 @@ h6 {
   margin: 0;
   padding: 0;
 }
-
-
-@media only screen and (min-width: 300px) {
-  button {
-    background: none;
-    border-radius: 3px;
-    border: 2px solid lightgray;
-    font-size: 0.7rem;
-    font-family: 'Martian Mono', monospace;
-    color: #a4a4a4;
-
-    padding: 4px 8px;
-  }
+ul, li {
+  margin: 0;
+  padding: 0;
 }
-@media only screen and (min-width: 600px) {
-  
+ul {
+  margin-top: 3px;
+  list-style: square;
+  list-style-position: inside;
+  display: flex;
+  flex-direction: column;
+  gap: 3px;
 }
+li {
+  margin-bottom: 2px;
+  font-size: 0.7rem;
+  color: #b6b6b6;
+}
+h5, h6 {
+  font-weight: 400;
+}
+
+.sub-text {
+  font-size: 0.6rem;
+  color: #b6b6b6;
+}
+

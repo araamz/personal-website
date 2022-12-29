@@ -42,6 +42,7 @@
     padding: 30px;
   }
   .logo {
+    font-size: 1rem;
     letter-spacing: 2px;
     text-align: center;
   }

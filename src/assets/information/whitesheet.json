@@ -1,51 +1,94 @@
 {
     "whitesheet": {
         "biography": {
-            "body": "Hello there! My name is Araam Zaremehrjardi and I enjoy all things technology and made it a part of both my passion and career. I am currently a undergraduate student at the Univirsity of Nevada, Reno studying Computer Science and Engineering. My focuses are in the areas of moving data through the creation of data pipelines, full-stack development, and embedded programming. When I am not studying technolgies, you can find me hiking the Sierra's in nearby Lake Tahoe or enjoying a cup of coffee in Reno's Midtown."
+            "body": "Hello there! My name is Araam Zaremehrjardi and I enjoy all things technology and made it a part of both my passion and career. I am currently an undergraduate student at the University of Nevada, Reno studying Computer Science and Engineering. My focuses are the development of data pipelines, full-stack development, and embedded programming. When I am not studying technologies, you can find me hiking the Sierra's nearby Lake Tahoe or enjoying a cup of coffee in Reno's Midtown."
         },
         "education": [
             {
-                "university": "University of Nevada, Reno",
+                "institution": "University of Nevada, Reno",
                 "degree": "B.S. in Computer Science and Engineering",
-                "gpa": 3.594
+                "start_year": 2018
             }
         ],
         "experience": [
             {
                 "title": "ENGR 100 Teaching Assistant",
-                "description": "Test",
+                "description": "Worked as a teaching assistant for the introductory engineering course at the university. I mentored students through a variety of labs designed to engage students in different engineering disciplines and thus discover what engineering field students would like to study. I would assist students in completiton of labs and grade their performance of their completed labs and homework assigned to them. My duties passed mentoring and grading were to up keep the lab in assisting other mentors in either organizing lab materials before they began or answer questions by students that come during lab hours for help.",
                 "start_year": 2019,
-                "end_year": null,
-                "present": true,
+                "end_year": 2023,
                 "takeaways": [
-                    "Learned"
+                    "Facilitated problem-solving skills among students to complete labs. ",
+                    "Encouraged collaboration among student groups and engaged in discussing solutions to the given task with students.",
+                    "Graded student's performance on weekly basis based on submitted lab and homework assignments."
                 ]
             },
             {
                 "title": "CS 425 Grader",
-                "description": "Test",
+                "description": "Worked as a grader for the senior capstone course assisting the teaching team by grading and evaluating senior project capstones. Graded project assignments ensuring student's project ideas were evaluated for completeness and fair contribtion by all team members. Graded students protoype applications with the the teaching team ensuring student's met certain performance critera depending if the application was embeeded, web-application, or game application.",
                 "start_year": 2022,
-                "end_year": null,
-                "present": true,
                 "takeaways": [
-                    "Learned"
+                    "Evaluated students' capstone demonstrations and assigned appropriate scores based upon certain performance criteria.",
+                    "Graded student project assignments that would become design documents ensuring they contributed equally planning and implemtiaton of their application."
                 ]
             },
             {
                 "title": "NCAR Undergraduate Research Assistant",
-                "description": "Test",
+                "description": "Currently working as an undergraduate researcher at the Nevada Center of Applied Research (NCAR) in the planning and implementation of a data pipeline to be used for both live LiDAR and archived LiDAR data. My duties include overall analysis of different metholgies and technolgoies to acheive a performant and scablealbe data pipeline to be used by both internal applications and exernal applications. Planning of the data pipeline included working with graduate supervisor and database architect to develop a schema based upon the shape of data incoming from both live LiDAR feeds and stored LiDAR data from database. Attended meetings with stakeholders such as the Washoe Regional Transport Commision (RTC) and NCAR to ensure the pipeline had met all parties requirements for the developments applications on-top of the pipeline.",
                 "start_year": 2022,
-                "end_year": null,
-                "present": true,
                 "takeaways": [
-                    "Learned"
+                    "Used MQTT as a base protocol for the transfer of LiDAR data between street-side lights that record point-clouds of intersection across Virginia Street.",
+                    "Used gRPC as a protocol to facilirate transfer of previosuly stored LiDAR to internal and external applications.",
+                    "Used React with Three.js to develop a internal application that uses the gRPC-based data pipeline to visualize saved point-clouds of intersections on Virginia Street."
                 ]
             }
         ],
         "skills": {
-            "frontend": [
+            "Programming Languages": [
+                {
+                    "technology": "C/C++",
+                    "level": 0,
+                    "description": "test",
+                    "takeaways": [
+                        "Hooks",
+                        "Router",
+                        "Fetching"
+                    ]
+                },
+                {
+                    "technology": "TypeScript",
+                    "level": 0,
+                    "description": "test",
+                    "takeaways": [
+                        "Hooks",
+                        "Router",
+                        "Fetching"
+                    ]
+                },                   
+                {
+                    "technology": "Python",
+                    "level": 0,
+                    "description": "test",
+                    "takeaways": [
+                        "Hooks",
+                        "Router",
+                        "Fetching"
+                    ]
+                },
+                {
+                    "technology": "Java",
+                    "level": 0,
+                    "description": "test",
+                    "takeaways": [
+                        "Hooks",
+                        "Router",
+                        "Fetching"
+                    ]
+                }
+            ],
+            "Frontend Development": [
                 {
                     "technology": "React JavaScript Library",
+                    "level": 0,
                     "description": "test",
                     "takeaways": [
                         "Hooks",
@@ -55,26 +98,19 @@
                 },
                 {
                     "technology": "Vue.js",
+                    "level": 0,
                     "description": "test",
                     "takeaways": [
                         "Options API",
                         "Router",
                         "Fetching"
                     ]
-                },      
-                {
-                    "technology": "Vue.js",
-                    "description": "test",
-                    "takeaways": [
-                        "Options API",
-                        "Router",
-                        "Fetching"
-                    ]
-                }        
+                }   
             ],
-            "backend": [
+            "Backend Development": [
                 {
                     "technology": "Flask",
+                    "level": 0,
                     "description": "test",
                     "takeaways": [
                         "Routing"
@@ -84,6 +120,7 @@
             "Embedded Development": [
                 {
                     "technology": "Arduino UNO",
+                    "level": 0,
                     "description": "test",
                     "takeaways": [
                         "UART Communication"
@@ -91,6 +128,7 @@
                 },
                 {
                     "technology": "ESP32-C3",
+                    "level": 0,
                     "description": "test",
                     "takeaways": [
                         "TCP Communication"
@@ -100,6 +138,7 @@
             "Networking": [
                 {
                     "technology": "gRPC",
+                    "level": 0,
                     "description": "test",
                     "takeaways": [
                         "UART Communication"
@@ -107,6 +146,7 @@
                 },
                 {
                     "technology": "MQTT",
+                    "level": 0,
                     "description": "test",
                     "takeaways": [
                         "UART Communication"

@@ -8,14 +8,14 @@
         <div class="navigation-container">
             <RouterLink :to="{ name: 'Whitesheet' }">
                 <p class="link_title">📄 Whitesheet</p>
-                <p class="link_description">Learn about my biography, skills, and experiences.</p>
+                <p class="link_description">Learn about my biography, experiences, and skills.</p>
             </RouterLink>
             <RouterLink :to="{ name: 'Projects' }">
                 <p class="link_title">🛠️ Projects</p>
                 <p class="link_description">See my projects that range from embedded to full-stack applications.</p>
             </RouterLink>
             <RouterLink :to="{ name: 'Contact' }">
-                <p class="link_title">📞 Contacts</p>
+                <p class="link_title">📞 Contact</p>
                 <p class="link_description">Let's get in touch and talk about what we could do together.</p>
             </RouterLink>
         </div>
