@@ -7,42 +7,54 @@
     import TechnologySet from '../components/TechnologySet.vue'
 
     export default {
+
         components: {
+
             Institution,
             Job,
             TechnologySet
-        },
-        data() {
-            return {
-                whitesheet: whitesheet_json,
-                selected_skill_set: whitesheet_json.whitesheet.skills[0].label,
-                shown_skill_set: whitesheet_json.whitesheet.skills[0].technolgoies,
-            }
-        },
-        computed: {
 
         },
+
+        data() {
+            return {
+
+                whitesheet: whitesheet_json,
+
+                selected_skill_set: whitesheet_json.whitesheet.skills[0].label,
+                shown_skill_set: whitesheet_json.whitesheet.skills[0].technolgoies
+
+            }
+        },
+
         watch: {
              selected_skill_set() {
+
                 this.whitesheet.whitesheet.skills.filter((skill_set => {
                      if (skill_set.label === this.selected_skill_set) {
                          this.shown_skill_set = skill_set.technolgoies
                      }
                  }))
              }
+
          },
+
         methods: {
             select_skill(skill: string) {
+
                 this.selected_skill_set = skill
                 this.$nextTick(() => document.getElementById("technology_set")?.scrollIntoView({behavior:'smooth'}))
 
             },
+
             show_skill(skill: string) {
+
                 if (skill === this.selected_skill_set) {
                     return true
                 } else {
                     return false
                 }
+
             }
         }
     }
@@ -93,7 +105,7 @@
                 Skills
             </h3>
             <div class="skill-selector">
-                <button @click="select_skill(skill_set.label)" class="skill-selection" :class="{area_active: selected_skill_set === skill_set.label}" v-for="skill_set in whitesheet.whitesheet.skills" :key="skill_set.label">
+                <button @click="select_skill(skill_set.label)" class="skill-selection" :class="{skill_active: selected_skill_set === skill_set.label}" v-for="skill_set in whitesheet.whitesheet.skills" :key="skill_set.label">
                     {{  skill_set.label }}
                 </button>
             </div>
@@ -141,7 +153,6 @@
         flex-direction: column;
         gap: 10px;
     }
-
     .skill-selector {
         display: grid;
         grid-template-columns: 1fr 1fr;
@@ -164,17 +175,11 @@
         background: lightgray;
         transition: ease-in 0.1s all;
     }
-    .area_active {
+    .skill_active, .skill_active:hover {
         background: black;
         color: white;
         border-color: black;
     }
-    .area_active:hover {
-        background: black;
-        color: white;
-        border-color: black;
-    }
-    
 }
 
 @media only screen and (min-width: 600px) {
