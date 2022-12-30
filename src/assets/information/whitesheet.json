@@ -51,26 +51,24 @@
                         "technology": "C/C++",
                         "level": 0,
                         "takeaways": [
-                            "Hooks",
-                            "Router",
-                            "Fetching"
+                            "Can effectively use C/C++ for manipulation of microcontroller registers to acheive desired device functionality. "
                         ]
                     },
                     {
                         "technology": "TypeScript",
                         "level": 0,
                         "takeaways": [
-                            "Hooks",
-                            "Router",
-                            "Fetching"
+                            "Used in React-based projects to ensure the proper shape of data for both objects and props.",
+                            "Used in React-based projects to ensure proper typing support for data items in projects.",
+                            "Used to properly define interface types to be used for both ensuring shape of data and typing support supprt in Visual Studio Code."
                         ]
                     },
                     {
                         "technology": "Python",
                         "level": 0,
                         "takeaways": [
-                            "Hooks",
-                            "Router",
+                            "Deployment Test",
+                            "GitHub work flow test",
                             "Fetching"
                         ]
                     },

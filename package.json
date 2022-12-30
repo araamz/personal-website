@@ -1,13 +1,12 @@
 {
-  "name": "araamz.github.io",
+  "name": "personal-website",
   "private": true,
   "version": "0.0.0",
   "type": "module",
   "scripts": {
     "dev": "vite",
     "build": "vue-tsc && vite build",
-    "preview": "vite preview",
-    "host": "vite --host"
+    "preview": "vite preview"
   },
   "dependencies": {
     "firebase": "^9.15.0",
