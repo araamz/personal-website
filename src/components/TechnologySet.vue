@@ -22,9 +22,6 @@
 
 <template>
     <div class="technology-set">
-        <h4>
-            {{ label }}
-        </h4>
         <div class="technology-items">
             <Technology v-for="technology in technologies" 
             :technology="technology.technology"
@@ -36,6 +33,7 @@
 </template>
 
 <style scoped>
+
 @media only screen and (min-width: 300px) {
     .technology-set {
         display: flex;

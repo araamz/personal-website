@@ -23,20 +23,26 @@
 
         },
         watch: {
-            selected_skill_set() {
-                console.log(this.whitesheet.whitesheet.skills.filter((area => {
-                    if (area.label === this.selected_skill_set) {
-                        this.shown_skill_set = area.technolgoies
-                    }
-                })))
-
-                console.log(this.shown_skill_set)
-            }
-
-        },
+             selected_skill_set() {
+                this.whitesheet.whitesheet.skills.filter((skill_set => {
+                     if (skill_set.label === this.selected_skill_set) {
+                         this.shown_skill_set = skill_set.technolgoies
+                     }
+                 }))
+             }
+         },
         methods: {
             select_skill(skill: string) {
                 this.selected_skill_set = skill
+                this.$nextTick(() => document.getElementById("technology_set")?.scrollIntoView({behavior:'smooth'}))
+
+            },
+            show_skill(skill: string) {
+                if (skill === this.selected_skill_set) {
+                    return true
+                } else {
+                    return false
+                }
             }
         }
     }
@@ -87,15 +93,19 @@
                 Skills
             </h3>
             <div class="skill-selector">
-                <button @click="select_skill(area.label)" class="skill-selection" :class="{area_active: selected_skill_set === area.label}" v-for="area in whitesheet.whitesheet.skills" :key="area.label">
-                    {{  area.label }}
+                <button @click="select_skill(skill_set.label)" class="skill-selection" :class="{area_active: selected_skill_set === skill_set.label}" v-for="skill_set in whitesheet.whitesheet.skills" :key="skill_set.label">
+                    {{  skill_set.label }}
                 </button>
             </div>
-            <div>
-                <Transition name="fade">
+            <div class="skill-set">
+                
+                <Transition v-for="technology_set in whitesheet.whitesheet.skills" name="slide-fade" >
                     <TechnologySet 
-                        :technologies="shown_skill_set" 
-                        :label="selected_skill_set" 
+                        v-if="show_skill(technology_set.label)"
+                        :technologies="technology_set.technolgoies" 
+                        :label="technology_set.label" 
+                        :key="technology_set.label"
+                        id="technology_set"
                     />
                 </Transition>
             </div>
@@ -104,13 +114,12 @@
 </template>
 
 <style scoped>
-.fade-enter-active,
-.fade-leave-active {
-  transition: opacity 0.5s ease;
+.slide-fade-enter-active {
+  transition: all 0.4s ease;
 }
-
-.fade-enter-from,
-.fade-leave-to {
+.slide-fade-enter-from,
+.slide-fade-leave-to {
+  transform: translateY(-10px);
   opacity: 0;
 }
 @media only screen and (min-width: 300px) {
@@ -137,7 +146,9 @@
         display: grid;
         grid-template-columns: 1fr 1fr;
         gap: 10px;
-        margin-bottom: 6px;
+    }
+    .skill-set {
+        margin-top: 6px;
     }
     .skill-selection {
         border-radius: 4px;
@@ -151,7 +162,7 @@
     }
     .skill-selection:hover {
         background: lightgray;
-        transition: ease-in 0.1s background;
+        transition: ease-in 0.1s all;
     }
     .area_active {
         background: black;
@@ -169,7 +180,7 @@
 @media only screen and (min-width: 600px) {
     .skill-selector {
         display: grid;
-        width: calc(100% - 110px);
+        width: calc(100% - 121px);
         grid-template-columns: 1fr 1fr 1fr;
         gap: 10px;
         margin-bottom: 6px;

@@ -25,7 +25,7 @@
 <style scoped>
 
 .slide-fade-enter-active {
-  transition: all 0.4s ease-out;
+  transition: all 0.4s ease;
 }
 .slide-fade-enter-from,
 .slide-fade-leave-to {
@@ -36,6 +36,7 @@
 @media only screen and (min-width: 300px) {
 
   .app {
+    scroll-behavior: smooth;
     display: flex;
     flex-direction: column;
     gap: 30px;

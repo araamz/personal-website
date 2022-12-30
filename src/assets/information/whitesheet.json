@@ -7,7 +7,8 @@
             {
                 "institution": "University of Nevada, Reno",
                 "degree": "B.S. in Computer Science and Engineering",
-                "start_year": 2018
+                "start_year": 2018,
+                "end_year": 2023
             }
         ],
         "experience": [
@@ -44,7 +45,7 @@
         ],
         "skills": [
             {
-                "label": "Programming Languages",
+                "label": "Languages",
                 "technolgoies": [
                     {
                         "technology": "C/C++",
@@ -85,7 +86,7 @@
                 ]
             },
             {
-                "label": "Frontend Development",
+                "label": "Frontend",
                 "technolgoies": [
                     {
                         "technology": "React JavaScript Library",
@@ -108,7 +109,7 @@
                 ]
             },
             {
-                "label": "Backend Development",
+                "label": "Backend",
                 "technolgoies": [
                     {
                         "technology": "Flask",
@@ -120,7 +121,7 @@
                 ]
             },
             {
-                "label": "Embedded Development",
+                "label": "Embedded",
                 "technolgoies": [
                     {
                         "technology": "Arduino UNO",
@@ -145,14 +146,14 @@
                         "technology": "gRPC",
                         "level": 0,
                         "takeaways": [
-                            "UART Communication"
+                            "Worked as a grader for the senior capstone course assisting the teaching team by grading and evaluating senior project capstones. Graded project assignments ensuring student's project ideas were evaluated for completeness and fair contribtion by all team members. Graded students protoype applications with the the teaching team ensuring student's met certain performance critera depending if the application was embeeded, web-application, or game application."
                         ]
                     },
                     {
                         "technology": "MQTT",
                         "level": 0,
                         "takeaways": [
-                            "UART Communication"
+                            "Worked as a grader for the senior capstone course assisting the teaching team by grading and evaluating senior project capstones. Graded project assignments ensuring student's project ideas were evaluated for completeness and fair contribtion by all team members. Graded students protoype applications with the the teaching team ensuring student's met certain performance critera depending if the application was embeeded, web-application, or game application."
                         ]
                     }
                 ]
