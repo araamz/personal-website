@@ -1,0 +1,75 @@
+{
+    "projects": [
+        {
+            "name": "Glowpucks",
+            "description": "teset",
+            "repository": "https://github.com/araamz/GlowPucks",
+            "tags": [
+                "API Development",
+                "React",
+                "Embedded",
+                "MQTT",
+                "Flask",
+                "Python",
+                "Arduino UNO",
+                "Espressif ESP32-C3",
+                "Routing",
+                "C"
+            ]
+        },
+        {
+            "name": "Stipes",
+            "description": "teset",
+            "repository": "https://github.com/araamz/Stipes",
+            "tags": [
+                "React",
+                "Flask",
+                "Routing",
+                "API Development",
+                "JavaScript",
+                "Python"
+            ]
+        },
+        {
+            "name": "Cookie Clicker",
+            "description": "teset",
+            "repository": "https://github.com/araamz/Cookie-Clicker",
+            "tags": [
+                "MVC",
+                "Django",
+                "API Development",
+                "JavaScript",
+                "Python"
+
+            ]
+        },
+        {
+            "name": "Java Color Picker",
+            "description": "teset",
+            "repository": "https://github.com/araamz/Java-Color-Picker",
+            "tags": [
+                "Java",
+                "Swing",
+                "MVC"
+            ]
+        },
+        {
+            "name": "Toy Database",
+            "description": "teset",
+            "repository": "https://github.com/araamz/Toy-Database",
+            "tags": [
+                "Java",
+                "Parsing"
+            ]
+        },
+        {
+            "name": "Mockup Swamp Cooler",
+            "description": "teset",
+            "repository": "https://github.com/TommySimcox/CPE301-Araam-Thomas",
+            "tags": [
+                "Arduino MEGA 2650",
+                "Embedded"
+            ]
+        }
+    ]
+}

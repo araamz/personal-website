@@ -1,0 +1,19 @@
+{
+    "contact": [
+        {
+            "type": 0,
+            "label": "email",
+            "link": "araamzaremehrjardi@gmail.com"
+        },
+        {
+            "type": 0,
+            "label": "LinkedIn",
+            "link": "https://www.linkedin.com/in/araamz/"
+        },
+        {
+            "type": 1,
+            "label": "GitHub",
+            "link": "https://github.com/araamz"
+        }
+    ]
+}

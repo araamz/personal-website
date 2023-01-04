@@ -129,7 +129,7 @@
                         ]
                     },
                     {
-                        "technology": "ESP32-C3",
+                        "technology": "Espressif ESP32-C3",
                         "level": 0,
                         "takeaways": [
                             "TCP Communication"
