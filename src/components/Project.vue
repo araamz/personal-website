@@ -13,13 +13,18 @@
             return {
                 commits: [
                     {
-                        "date": "2022-11-24T11:18:01Z",
-                        "message": "Finished Backend"
+                        "date": "2022-11-07T03:11:02Z",
+                        "message": "Updated Device Page"
                     },
                     {
-                        "date": "2022-11-22T07:42:18Z",
-                        "message": "Extended Backend API"                  
+                        "date": "2022-11-15T16:58:37Z",
+                        "message": "Began Backend"
+                    },
+                    {
+                        "date": "2022-11-16T08:01:56Z",
+                        "message": "Developed update_config for /device/config route"
                     }
+
                 ]
             }
         },
@@ -38,28 +43,27 @@
 
 <template>
     <div class="project">
-        <h3>
+        <h3 class="name">
             {{ name }}
         </h3>
-        <p>
+        <p class="description">
             {{ description }}
         </p>
-        <div>
-            <p>
-                Latest Project Updates
+        <div class="tags">
+            <Tag v-for="tag in tags" :label="tag" />
+        </div>
+        <div class="commits">
+            <p class="sub-text">
+                Latest Project Commits
             </p>
             <div>
-
                 <Commit 
-                    v-for="commit in commits" 
-                    :date="commit.date"
+                    v-for="commit in commits"
+                    :timestamp="commit.date" 
                     :message="commit.message"
                 />
             </div>
-        </div>
-        <a :href="repository_link"> Go to {{ name }} Repository </a>
-        <div>
-            <Tag v-for="tag in tags" :label="tag" />
+            <a class="repository_link" :href="repository_link"> Go to {{ name }} Repository </a>
         </div>
     </div>
 </template>
@@ -69,11 +73,57 @@
     .project {
         display: flex;
         flex-direction: column;
+        row-gap: 4px;
+        column-gap: 24px;
+    }
+    .tags {
+        display: flex;
+        gap: 4px;
+        flex-wrap: wrap;
+    }
+    .commits > div {
+        margin-top: 4px;
+        display: flex;
+        flex-direction: column;
         gap: 6px;
+    }
+    .repository_link {
+        font-size: 0.4rem;
+        color: lightgray;
+        text-decoration: none;
+        transition: all ease 0.2s;
+    }
+    .repository_link:hover {
+        color: black;
+        text-decoration: underline;
     }
 
 }
-@media only screen and (min-width: 600px) {
-
+@media only screen and (min-width: 900px) {
+    .project {
+        display: grid;
+        grid-template-columns: 1fr 200px;
+        grid-template-rows: fit-content fit-content fit-content;
+        align-items: start;
+    }
+    .name {
+        grid-column-start: 1;
+        grid-column-end: 2;
+    }
+    .description {
+        grid-column-start: 1;
+        grid-column-end: 2;
+    }
+    .tags {
+        grid-column-start: 1;
+        grid-column-end: 2;
+    }
+    .commits {
+        grid-column-start: 2;
+        grid-column-end: 3;
+        grid-row-start: 1;
+        grid-row-end: span 4;
+        overflow-y: auto;
+    }
 }
 </style>
