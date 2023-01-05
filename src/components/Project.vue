@@ -2,7 +2,9 @@
 
     import Tag from './Tag.vue';
     import Commit from './Commit.vue';
-
+    
+    const github_access_token: String = import.meta.env.VITE_GITHUB_ACCESS_TOKEN
+    
     export default {
 
         components: {
@@ -11,21 +13,9 @@
         },
         data() {
             return {
-                commits: [
-                    {
-                        "date": "2022-11-07T03:11:02Z",
-                        "message": "Updated Device Page"
-                    },
-                    {
-                        "date": "2022-11-15T16:58:37Z",
-                        "message": "Began Backend"
-                    },
-                    {
-                        "date": "2022-11-16T08:01:56Z",
-                        "message": "Developed update_config for /device/config route"
-                    }
-
-                ]
+                commits_error: false,
+                commits_loading: true,
+                commits: Array<any>()
             }
         },
         props: {
@@ -36,7 +26,39 @@
             tags: {
                 type: Array<String>
             }
+        },
+        methods: {
+            async get_commits() {
+                const commit_count: Number = 3
+                const url = `https://api.github.com/repos/araamz/${this.repository_name}/commits?per_page=${commit_count}`
+                const options = {
+                    headers: {
+                        "Accept": "application/vnd.github+json",
+                        "Authorization": `Bearer ${github_access_token}`
+                    }
+                }
+
+                const request = await fetch(url, options).then((response) => {
+                    if (!response.ok) {
+                        throw Error(response.statusText)
+                    }
+                    return response.json()
+                }).then(commits => {
+                    this.commits = commits
+                    this.commits_loading = false
+                    this.commits_error = false
+                }).catch(error => {
+                    this.commits_error = true
+                    this.commits_loading = false
+                })
+
+            }
+        },
+        mounted() {
+            this.get_commits()
+
         }
+    
     }
 
 </script>
@@ -57,18 +79,31 @@
                 Latest Project Commits
             </p>
             <div>
+                <div v-if="commits_loading" class="commit_loading_message"> </div>
+                <div v-if="commits_error" class="commit_error_message">
+                    Error Loading Commits.
+                </div>
                 <Commit 
+                    v-if="!commits_error"
                     v-for="commit in commits"
-                    :timestamp="commit.date" 
-                    :message="commit.message"
+                    :timestamp="commit.commit.author.date" 
+                    :message="commit.commit.message"
                 />
             </div>
-            <a class="repository_link" :href="repository_link"> Go to {{ name }} Repository </a>
+            <a class="repository-link" :href="repository_link"> Go to {{ name }} Repository </a>
         </div>
     </div>
 </template>
 
 <style scoped>
+@keyframes loading_commits {
+    from {
+        background: #ededed;
+    }
+    to {
+        background: lightgray;
+    }
+}
 @media only screen and (min-width: 300px) {
     .project {
         display: flex;
@@ -78,8 +113,25 @@
     }
     .tags {
         display: flex;
-        gap: 4px;
+        gap: 6px;
         flex-wrap: wrap;
+    }
+    .commit_loading_message {
+        animation: loading_commits 0.5s ease-in-out 0s infinite alternate both;
+        border-radius: 4px;
+        width: 100%;
+        height: 40px;
+    }
+    .commit_error_message {
+        color: white;
+        background: #f080807e;
+        border-radius: 4px;
+        width: 100%;
+        height: 40px;
+        display: flex;
+        place-content: center;
+        place-items: center;
+        font-size: 0.5rem;
     }
     .commits > div {
         margin-top: 4px;
@@ -87,19 +139,20 @@
         flex-direction: column;
         gap: 6px;
     }
-    .repository_link {
+    .repository-link {
         font-size: 0.4rem;
+        line-height: 0.5rem !important;
         color: lightgray;
         text-decoration: none;
         transition: all ease 0.2s;
     }
-    .repository_link:hover {
+    .repository-link:hover {
         color: black;
         text-decoration: underline;
     }
 
 }
-@media only screen and (min-width: 900px) {
+@media only screen and (min-width: 600px) {
     .project {
         display: grid;
         grid-template-columns: 1fr 200px;
@@ -123,7 +176,9 @@
         grid-column-end: 3;
         grid-row-start: 1;
         grid-row-end: span 4;
-        overflow-y: auto;
+    }
+    .repository_link {
+        font-size: 0.5rem;
     }
 }
 </style>

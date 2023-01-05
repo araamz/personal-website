@@ -4,7 +4,10 @@ import { type } from 'os'
 
     export default {
         props: {
-            timestamp: String,
+            timestamp: {
+                type: String,
+                default: null
+            },
             message: String
         },
         computed: {
@@ -74,8 +77,8 @@ import { type } from 'os'
         padding: 6px;
     }
     .commit > p {
-        font-size: 0.4rem;
-        line-height: 0.7rem;
+        font-size: 0.6rem;
+        line-height: 0.9rem;
     }
     .date {
         font-weight: 700;
