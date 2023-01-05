@@ -2,11 +2,11 @@
     "contact": [
         {
             "type": 0,
-            "label": "email",
+            "label": "E-mail",
             "link": "araamzaremehrjardi@gmail.com"
         },
         {
-            "type": 0,
+            "type": 1,
             "label": "LinkedIn",
             "link": "https://www.linkedin.com/in/araamz/"
         },

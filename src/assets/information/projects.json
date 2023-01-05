@@ -2,7 +2,7 @@
     "projects": [
         {
             "name": "Glowpucks",
-            "description": "teset",
+            "description": "Hello there! My name is Araam Zaremehrjardi and I enjoy all things technology and made it a part of both my passion and career. I am currently an undergraduate student at the University of Nevada, Reno studying Computer Science and Engineering. My focuses are the development of data pipelines, full-stack development, and embedded programming. When I am not studying technologies, you can find me hiking the Sierra's nearby Lake Tahoe or enjoying a cup of coffee in Reno's Midtown.",
             "repository": "https://github.com/araamz/GlowPucks",
             "tags": [
                 "API Development",
@@ -65,6 +65,7 @@
         {
             "name": "Mockup Swamp Cooler",
             "description": "teset",
+            "thumbnail": "../assets/thumbnails/mockup_swamp_cooler.jpeg",
             "repository": "https://github.com/TommySimcox/CPE301-Araam-Thomas",
             "tags": [
                 "Arduino MEGA 2650",
