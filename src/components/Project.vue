@@ -90,7 +90,9 @@
                     :message="commit.commit.message"
                 />
             </div>
-            <a class="repository-link" :href="repository_link"> Go to {{ name }} Repository </a>
+            <a class="repository-link" :href="repository_link">
+                <p> Go to {{ name }} Repository </p>
+            </a>
         </div>
     </div>
 </template>
@@ -133,6 +135,7 @@
         place-items: center;
         font-size: 0.5rem;
     }
+
     .commits > div {
         margin-top: 4px;
         display: flex;
@@ -140,13 +143,17 @@
         gap: 6px;
     }
     .repository-link {
-        font-size: 0.4rem;
-        line-height: 0.5rem !important;
-        color: lightgray;
         text-decoration: none;
+    }
+    .repository-link > p {
+        margin-top: 6px;
+        font-size: 0.4rem;
+        color: lightgray;
+        text-align: left;
+        line-height: 1rem;
         transition: all ease 0.2s;
     }
-    .repository-link:hover {
+    .repository-link > p:hover {
         color: black;
         text-decoration: underline;
     }
