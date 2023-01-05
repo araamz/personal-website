@@ -1,24 +1,36 @@
 <script lang="ts">
 
     import Tag from './Tag.vue';
+    import Commit from './Commit.vue';
 
     export default {
 
         components: {
-            Tag
+            Tag,
+            Commit
+        },
+        data() {
+            return {
+                commits: [
+                    {
+                        "date": "2022-11-24T11:18:01Z",
+                        "message": "Finished Backend"
+                    },
+                    {
+                        "date": "2022-11-22T07:42:18Z",
+                        "message": "Extended Backend API"                  
+                    }
+                ]
+            }
         },
         props: {
             name: String,
             description: String,
-            thumbnail: String || null,
-            repository: String,
+            repository_link: String,
+            repository_name: String,
             tags: {
                 type: Array<String>
             }
-        },
-
-        created() {
-            console.log(this.thumbnail)
         }
     }
 
@@ -32,13 +44,20 @@
         <p>
             {{ description }}
         </p>
-        <img class="thumbnail" :src="thumbnail" v-if="thumbnail" />
-        <div class="no_thumbnail" v-else>
+        <div>
             <p>
-                Thumbnail Not Provided.
+                Latest Project Updates
             </p>
+            <div>
+
+                <Commit 
+                    v-for="commit in commits" 
+                    :date="commit.date"
+                    :message="commit.message"
+                />
+            </div>
         </div>
-        <a :href="repository"> Go to {{ name }} Repository </a>
+        <a :href="repository_link"> Go to {{ name }} Repository </a>
         <div>
             <Tag v-for="tag in tags" :label="tag" />
         </div>
@@ -47,31 +66,12 @@
 
 <style scoped>
 @media only screen and (min-width: 300px) {
-    .thumbnail {
-        height: 160px;
-        object-fit: cover;
-        border-radius: 4px;
-        box-shadow: 0 5px 8px 1px lightgray;
-    }
     .project {
         display: flex;
         flex-direction: column;
         gap: 6px;
     }
-    .no_thumbnail {
 
-        height: 160px;
-        border: 2px dotted lightgray; 
-        border-radius: 4px;
-        display: flex; 
-    }
-    .no_thumbnail > p {
-        align-self: center;
-        width: 100%;
-        text-align: center;
-        font-size: 0.5rem;
-        color: #9b9b9b;
-    }
 }
 @media only screen and (min-width: 600px) {
 

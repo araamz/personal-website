@@ -23,8 +23,8 @@
             v-for="project in projects.projects" 
             :name="project.name"
             :description="project.description"
-            :thumbnail="project.thumbnail"
-            :repository="project.repository"
+            :repository_link="project.repository_link"
+            :repository_name="project.repository_name"
             :tags="project.tags"
         />
     </div>

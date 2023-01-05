@@ -3,7 +3,8 @@
         {
             "name": "Glowpucks",
             "description": "Hello there! My name is Araam Zaremehrjardi and I enjoy all things technology and made it a part of both my passion and career. I am currently an undergraduate student at the University of Nevada, Reno studying Computer Science and Engineering. My focuses are the development of data pipelines, full-stack development, and embedded programming. When I am not studying technologies, you can find me hiking the Sierra's nearby Lake Tahoe or enjoying a cup of coffee in Reno's Midtown.",
-            "repository": "https://github.com/araamz/GlowPucks",
+            "repository_link": "https://github.com/araamz/GlowPucks",
+            "repository_name": "GlowPucks",
             "tags": [
                 "API Development",
                 "React",
@@ -20,7 +21,8 @@
         {
             "name": "Stipes",
             "description": "teset",
-            "repository": "https://github.com/araamz/Stipes",
+            "repository_link": "https://github.com/araamz/Stipes",
+            "repository_name": "Stipes",
             "tags": [
                 "React",
                 "Flask",
@@ -33,7 +35,8 @@
         {
             "name": "Cookie Clicker",
             "description": "teset",
-            "repository": "https://github.com/araamz/Cookie-Clicker",
+            "repository_link": "https://github.com/araamz/Cookie-Clicker",
+            "repository_name": "Cookie-Clicker",
             "tags": [
                 "MVC",
                 "Django",
@@ -46,7 +49,8 @@
         {
             "name": "Java Color Picker",
             "description": "teset",
-            "repository": "https://github.com/araamz/Java-Color-Picker",
+            "repository_link": "https://github.com/araamz/Java-Color-Picker",
+            "repository_name": "Java-Color-Picker",
             "tags": [
                 "Java",
                 "Swing",
@@ -56,20 +60,11 @@
         {
             "name": "Toy Database",
             "description": "teset",
-            "repository": "https://github.com/araamz/Toy-Database",
+            "repository_link": "https://github.com/araamz/Toy-Database",
+            "repository_name": "Toy-Database",
             "tags": [
                 "Java",
                 "Parsing"
-            ]
-        },
-        {
-            "name": "Mockup Swamp Cooler",
-            "description": "teset",
-            "thumbnail": "../assets/thumbnails/mockup_swamp_cooler.jpeg",
-            "repository": "https://github.com/TommySimcox/CPE301-Araam-Thomas",
-            "tags": [
-                "Arduino MEGA 2650",
-                "Embedded"
             ]
         }
     ]
