@@ -9,14 +9,14 @@
         {
             "type": 1,
             "label": "LinkedIn",
-            "description": "Want to see what I am upto and professional details about me? Feel free to explore my LinkedIn profile by clicking the handle.",
+            "description": "Want to see what I am up to and professional details about me? Feel free to explore my LinkedIn profile by clicking the handle.",
             "link": "https://www.linkedin.com/in/araamz/",
             "handle": "@araamz"
         },
         {
             "type": 1,
             "label": "GitHub",
-            "description": "Check out my latest projects and the code behind them on my GitHub! Check it out by clicking the GitHub handle/",
+            "description": "Check out my latest projects and the code behind them on my GitHub! Check it out by clicking the GitHub handle.",
             "link": "https://github.com/araamz",
             "handle": "@araamz"
         }
