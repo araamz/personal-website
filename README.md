@@ -1,18 +1,14 @@
-# Vue 3 + TypeScript + Vite
+# Personal Website 
+This is code behind my personal website found at *azaremehrjardi.dev*. The website uses Vue.js and Vue Router for its implementation with data being read from JSON files found within the *src/assets/information* folder in which correspond to their respective pages.
 
-This template should help get you started developing with Vue 3 and TypeScript in Vite. The template uses Vue 3 `<script setup>` SFCs, check out the [script setup docs](https://v3.vuejs.org/api/sfc-script-setup.html#sfc-script-setup) to learn more.
+## General Layout of the Application
+The general layout of the application features the use of routing to create a SPA-liek application with composition taht makes up the overall pages. 
 
-## Recommended IDE Setup
+### Application Routes
+The application has three main routes being of the following below:
+* / (whitesheet page)
+* /projects (projects page)
+* /contact (contacts page)
 
-- [VS Code](https://code.visualstudio.com/) + [Volar](https://marketplace.visualstudio.com/items?itemName=Vue.volar) (and disable Vetur) + [TypeScript Vue Plugin (Volar)](https://marketplace.visualstudio.com/items?itemName=Vue.vscode-typescript-vue-plugin).
-
-## Type Support For `.vue` Imports in TS
-
-TypeScript cannot handle type information for `.vue` imports by default, so we replace the `tsc` CLI with `vue-tsc` for type checking. In editors, we need [TypeScript Vue Plugin (Volar)](https://marketplace.visualstudio.com/items?itemName=Vue.vscode-typescript-vue-plugin) to make the TypeScript language service aware of `.vue` types.
-
-If the standalone TypeScript plugin doesn't feel fast enough to you, Volar has also implemented a [Take Over Mode](https://github.com/johnsoncodehk/volar/discussions/471#discussioncomment-1361669) that is more performant. You can enable it by the following steps:
-
-1. Disable the built-in TypeScript Extension
-   1. Run `Extensions: Show Built-in Extensions` from VSCode's command palette
-   2. Find `TypeScript and JavaScript Language Features`, right click and select `Disable (Workspace)`
-2. Reload the VSCode window by running `Developer: Reload Window` from the command palette.
+### Outbound Traffic and GitHub API Use
+The application uses the GitHub API to display the latest three commits for each project in the */projects* page. The logic to access the API can be found in the **Project.vue** component file. When the page is first loaded and the request is still processing, a temporary **<div>** is displayed untill the *commits_loading* variable is set to *false* in which the **<div>** gets conditionally removed by *v-if* directive. If there is a error getting the commits for each project then another variable is set being *commits_error* in which is set to *true* thus a **<div>** is conditionally rendered to show a error has occured. 
